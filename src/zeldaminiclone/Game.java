@@ -1,3 +1,4 @@
+package zeldaminiclone;
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -19,6 +20,8 @@ public class Game extends Canvas implements Runnable, KeyListener{
 	public Game() {
 		this.addKeyListener(this);
 		this.setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		
+		new Spritesheet();
 		
 		player = new Player(32,32);
 		world = new World();
@@ -78,7 +81,7 @@ public class Game extends Canvas implements Runnable, KeyListener{
 			}
 		}
 
-	}
+	} 
 
 	@Override
 	public void keyTyped(KeyEvent e) {
