@@ -9,6 +9,7 @@ public class Spritesheet {
 
 	public static BufferedImage spritesheet;
 	public static BufferedImage[] player_front;
+	public static BufferedImage[] inimigo_front;
 	public static BufferedImage tileWall;
 
 	public Spritesheet() {
@@ -20,9 +21,14 @@ public class Spritesheet {
 		}
 
 		player_front = new BufferedImage[2];
-		player_front[0] = Spritesheet.getSprite(0, 11,16,16);
+		inimigo_front = new BufferedImage[2];
+
+		player_front[0] = Spritesheet.getSprite(0, 11, 16, 16);
 		player_front[1] = Spritesheet.getSprite(16, 11, 16, 16);
-		
+
+		inimigo_front[0] = Spritesheet.getSprite(279, 217, 16, 16);
+		inimigo_front[1] = Spritesheet.getSprite(279 + 16, 217, 16, 16);;
+
 		tileWall = Spritesheet.getSprite(172, 185, 16, 16);
 	}
 
